@@ -1,0 +1,32 @@
+#include <iostream>
+
+using namespace std;
+/*cost of ballons*/
+int main()
+{
+	int k;
+	cin>>k;
+	while(k--){
+    		int cost_green,cost_purple,n;
+    		cin>>cost_green>>cost_purple>>n;
+    		int first[n],second[n];
+   	 	for(int i=0;i<n;i++){
+        		cin>>first[i]>>second[i];
+        	}
+    		int sum1=0,sum2=0;
+    		for(int i=0;i<n;i++){
+        		sum1=sum1+first[i];
+    		}
+    		for(int i=0;i<n;i++){
+        		sum2=sum2+second[i];
+    		}
+    		int a1,a2;
+    		a1=sum1*cost_green+sum2*cost_purple;
+    		a2=sum1*cost_purple+sum2*cost_green;
+    		if(a1>a2)
+        		cout<<a2;
+        	else
+        		cout<<a1;
+		
+	} cout<<"\n";
+}
