@@ -1,0 +1,23 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+char casetrans(char alpha){
+        string uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        string lowercase = "abcdefghijklmnopqrstuvwxyz";
+        int t=uppercase.find(alpha);
+        int k=lowercase.find(alpha);
+        if(t>=0)
+            return lowercase[t];
+        else
+            return uppercase[k];
+}
+
+int main()
+{
+    string q;
+    cin>>q;
+    for(int i=0;i<q.length();i++){
+      char a =casetrans(q[i]);
+       cout<<a;
+    }
+}
