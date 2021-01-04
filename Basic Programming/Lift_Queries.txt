@@ -1,0 +1,39 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int mod(int x){
+    if(x>=0)
+        return x;
+    else
+        return x*(-1);
+}
+int main()
+{
+    int n;
+    cin>>n;
+    int a=0,b=7,cal,at,bt;
+    while(n--)
+    {
+            cin>>cal;
+            at=mod(a-cal);
+            bt=mod(b-cal);
+            if(at<bt){
+                a=cal;
+                cout<<"A"<<endl;
+            }
+            else if(at>bt){
+                b=cal;
+                cout<<"B"<<endl;
+            }
+            else if(at==bt && b<cal){
+                b=cal;
+                cout<<"B"<<endl;
+            }
+            else{
+                a=cal;
+                cout<<"A"<<endl;
+            }
+    }
+}
+
