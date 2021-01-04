@@ -1,0 +1,26 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int val_c(char ch){
+    string s="abcdefghijklmnopqrstuvwxyz";
+    int flag=1;
+    for(int i=0;i<26 && flag==1;i++){
+        if(s[i]==ch){
+            flag=0;
+            return i+1;
+        }
+    }
+}
+
+int main()
+{
+    string q;
+    cin>>q;
+    int sum=0;
+    for(int i=0;i<q.length();i++){
+        sum=sum+val_c(q[i]);
+    }
+    cout<<sum;
+}
+
