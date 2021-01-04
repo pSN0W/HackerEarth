@@ -1,0 +1,21 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+
+int main()
+{
+    string shravya;
+    cin>>shravya;
+    int flag = 1;
+    for(int i=0;i<shravya.length()/2 && flag==1;i++){
+        if(shravya[i]==shravya[shravya.length()-i-1])
+            flag=1;
+        else
+            flag=0;
+    }
+    if(flag==1)
+        cout<<"YES";
+    else
+        cout<<"NO";
+}
