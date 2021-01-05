@@ -1,0 +1,65 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+    int n;
+    cin>>n;
+    while(n--)
+    {
+        string a;
+        int totmatch=0;
+        cin>>a;
+        for(int i=0;i<a.length();i++){
+            int match=0;
+            switch (a[i])
+            {
+            case '0':
+                match=6;
+                break;
+            case '1':
+                match=2;
+                break;
+            case '2':
+                match=5;
+                break;
+            case '3':
+                match=5;
+                break;
+            case '4':
+                match=4;
+                break;
+            case '5':
+                match=5;
+                break;
+            case '6':
+                match=6;
+                break;
+            case '7':
+                match=3;
+                break;
+            case '8':
+                match=7;
+                break;
+            case '9':
+                match=6;
+                break;
+            }
+            totmatch+=match;
+        }
+        if(totmatch%2==0){
+            for(int i=0;i<totmatch/2;i++){
+                cout<<"1";
+            }
+            }
+        else{
+			cout<<"7";
+			totmatch-=3;
+            for(int i=0;i<totmatch/2;i++){
+                cout<<"1";
+            }
+        }
+        cout<<endl;
+    }
+}
