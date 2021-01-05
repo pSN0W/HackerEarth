@@ -1,0 +1,42 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main(){
+	long long int N;
+	cin>>N;
+	long long int arr[N];
+	for(int i=0;i<N;i++){
+		cin>>arr[i];
+	}
+ 
+	long long int tsum =0;
+	for(long long int i=0;i<N;i++){
+		tsum += arr[i];
+	}
+	
+	long long int i=0;
+	long long int ans = INT_MAX;
+	long long int minidx = INT_MIN;
+	bool flag = false;
+	while(i<N){
+		long long int sum = tsum;
+		long long int csum = sum - arr[i];
+		if(csum%7==0){
+			if(ans>arr[i]){
+				ans = min(ans,arr[i]);
+				flag = true;
+				minidx = i;
+			}
+		}
+		
+		i++;
+	}
+	if(flag){
+		cout<<minidx;
+	}
+	else{
+	cout<<"-1";
+	}
+	return 0;
+}
