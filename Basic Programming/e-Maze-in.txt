@@ -1,0 +1,28 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+    int x=0,y=0;
+    string dir;
+    cin>>dir;
+    for(int i=0;i<dir.length();i++){
+        switch(dir[i])
+        {
+        case 'L':
+            x--;
+            break;
+        case 'R':
+            x++;
+            break;
+        case 'U':
+            y++;
+            break;
+        case 'D':
+            y--;
+            break;
+        }
+    }
+    cout<<x<<" "<<y;
+}
