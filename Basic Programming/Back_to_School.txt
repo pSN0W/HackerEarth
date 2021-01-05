@@ -1,0 +1,18 @@
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+	int a[3],maximum;
+	cin>>a[0]>>a[1]>>a[2];
+	maximum=a[0];
+	for(int i=1;i<3;i++){
+		if(a[i]>maximum)
+			maximum=a[i];
+	}
+	cout<<maximum<<endl;
+}
+
+
