@@ -1,0 +1,17 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+    int numB,i=0;
+    cin>>numB;
+    while(numB>3*i){
+        numB-=3*i;
+        i++;
+    }
+    if(numB<=i)
+        cout<<"Patlu";
+    else
+        cout<<"Motu";
+}
