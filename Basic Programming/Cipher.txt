@@ -1,0 +1,41 @@
+#include<bits/stdc++.h>
+
+using namespace std;
+
+char capEn(char x,int a){
+    string s="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    int g=s.find(x);
+    if(g<0)
+        return x;
+    else
+        return s[(g+a)%26];
+}
+
+char lowEn(char x,int a){
+    string s="abcdefghijklmnopqrstuvwxyz";
+    int g=s.find(x);
+    if(g<0)
+        return x;
+    else
+        return s[(g+a)%26];
+}
+
+char numEn(char x,int a){
+    string s="0123456789";
+    int g=s.find(x);
+    if(g<0)
+        return x;
+    else
+        return s[(g+a)%10];
+}
+int main(){
+    int n;
+    string s;
+    cin>>s>>n;
+    for(int i=0;i<s.length();i++){
+        s[i]=capEn(s[i],n);
+        s[i]=lowEn(s[i],n);
+        s[i]=numEn(s[i],n);
+    }
+    cout<<s<<endl;
+}
